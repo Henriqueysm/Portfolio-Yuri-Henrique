@@ -1319,12 +1319,16 @@ header h4 {
 
 /* Responsividade para celulares grandes (380px a 768px) */
 @media (min-width: 380px) and (max-width: 834px) {
+  *{
+    margin: 0 0 0 0;
+    overflow-x: hidden;
+}
+ 
   body {
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #0056b3, #99E1E0);
     color: white;
-    overflow-x: hidden;
   }
 
   h2, h3 {
@@ -1333,7 +1337,8 @@ header h4 {
   }
 
   header {
-    height: 75vh;
+    height: auto;
+    overflow: hidden;
   }
 
   header h1 {
@@ -1341,7 +1346,7 @@ header h4 {
     font-size: 1.8em;
     margin-left: 0;
     text-align: center;
-    top: 70%;
+    top: 50%;
     margin-left: -10%;
     
   }
@@ -1349,7 +1354,7 @@ header h4 {
   header h4 {
     font-size: 1em;
     margin-left: 0;
-    top: 75%;
+    top: 55%;
     margin-left: 2%;
   }
 
