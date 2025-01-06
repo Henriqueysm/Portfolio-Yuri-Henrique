@@ -200,7 +200,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: -240px 960px;
+  margin: -200px 960px;
   gap: 20px;
 
 }
@@ -998,8 +998,9 @@ form{
 
 
 
+
 /* Responsividade para celulares */
-@media (max-width: 600px){
+@media (min-width: 260px) and (max-width: 360px) {
 
   *{
       margin: 0 0 0 0;
@@ -1017,23 +1018,6 @@ form{
 
   }
   
-  header h1 {
-      width: 90%;
-      font-size: 2.0em;
-      line-height: 200%;
-      color:  #ffff00;
-      text-shadow: 2px 4px 2px rgba(50, 106, 210, 0.701);
-      font-family: 'mario';
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1; /* Garante que o texto fique acima da imagem */
-      padding: 0px; /* Espaçamento interno para melhor legibilidade */
-      border-radius: 10px; /* Bordas arredondadas para um efeito visual */
-      overflow: hidden;
-
-  }
   
   /*fonte do site inteiro*/
   h2{
@@ -1044,6 +1028,7 @@ form{
       margin: 20px;
       overflow: hidden;
       width: 100%;
+      
   }
   
   h3{
@@ -1056,7 +1041,32 @@ form{
     overflow-x: hidden;
     width: 100%;
   }
-    
+
+
+      
+header{
+  overflow: hidden;
+  height: 100vh;
+}
+
+header h1 {
+  width: 100%;
+  font-size: 1.6em;
+  top: 75%;
+  display: fixed;
+  text-align: center;
+  margin-left: -10%;
+
+}
+
+header h4 {
+  font-size: 0.9em;
+  width: 100%;
+  top: 84%;
+  text-align: center;
+  margin-left: 0%;
+}
+
   p {
       font-family: 'fonte1';
       font-size: 0.9em;
@@ -1121,7 +1131,7 @@ form{
     header {
     position: relative;
     text-align: center;
-    height: 100vh;
+    height: 105vh;
   }
   
   header img {
@@ -1140,56 +1150,21 @@ form{
   
 .imgyurimario {
   align-items: center;
-  margin-top: 20%;
+  margin-top: 15%;
   max-width: 80%; 
 }
-  
-header{
-  overflow: hidden;
-}
-
-header h1 {
-  top: 70%;
-  display: fixed;
-}
-
-header h4 {
-  width: 100%;
-  top: 75%;
-}
 
 
-  
-  /* Parte que mostra o mario correndo de capa -#INICIO-*/
-  /* Estilo para o article */
-  #inicio {
-      display: flex; /* Ativa o Flexbox */
-      flex-direction: column; /* Alinha itens em uma coluna (verticalmente) */
-      align-items: center; /* Centraliza itens horizontalmente */
-      height: 60vh; /* Define a altura igual à altura total da tela */
-      text-align: center; /* Centraliza o texto */
-      padding: 40px 40px 0px;
-    }
-    
-  
-  /* Estilo para a imagem */
-  .img1 {
-      width: 50%;
-      max-width: 80%; /* Garante que a imagem não ultrapasse os limites do container */
-      height: 180px; /* Mantém a proporção da imagem */
-      justify-content: center; /* Centraliza itens verticalmente */
-    }
-  
-  
-  
-    #sobre {
+   #sobre {
       display: flex;
       flex-direction: column; /* Para alinhar o conteúdo verticalmente */
       align-items: center; /* Centraliza horizontalmente */
       justify-content: center; /* Centraliza verticalmente */
-      min-height: 70vh;
-      padding: 0px 20px 0;
+      height: 200vh;
+      padding: 100px 20px 0;
       text-align: center;
+      overflow: hidden;
+      
     }
     
     .sobre-container {
@@ -1250,7 +1225,7 @@ header h4 {
   
     .conhecimento{
       margin: 0px 0px ;
-      height: 90vh;
+      height: 110vh;
       align-items: center;
       justify-content: center;
       text-align: center;
@@ -1294,7 +1269,9 @@ header h4 {
       
  
   .form {
- margin: -25% -23% 0% ;
+    margin: -43% -19%;
+    text-align: center;
+    align-items: center;
 }
     
   footer{
@@ -1335,6 +1312,125 @@ header h4 {
   
   
 }
+
+
+
+
+
+/* Responsividade para celulares grandes (380px a 768px) */
+@media (min-width: 380px) and (max-width: 834px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0056b3, #99E1E0);
+    color: white;
+    overflow-x: hidden;
+  }
+
+  h2, h3 {
+    font-size: 1.2em;
+    margin: 10px 20px;
+  }
+
+  header {
+    height: 75vh;
+  }
+
+  header h1 {
+    width: 100%;
+    font-size: 1.8em;
+    margin-left: 0;
+    text-align: center;
+    top: 70%;
+    margin-left: -10%;
+    
+  }
+
+  header h4 {
+    font-size: 1em;
+    margin-left: 0;
+    top: 75%;
+    margin-left: 2%;
+  }
+
+  .contato {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+
+  .redes {
+    gap: 10px;
+    margin: 210px auto;
+  }
+
+  .imgyurimario {
+    margin-top: 10%;
+    max-width: 70%;
+    text-align: center;
+    margin-left: 15%;
+  }
+
+  #sobre {
+    width: 100%;
+    padding: 50px 0px;
+    height: auto; /* Permite altura dinâmica */
+  }
+
+  .sobre-container, .sobre-container1 {
+    gap: 20px;
+    text-align: center;
+  }
+
+  .imgyuri {
+    width: 80px;
+    height: 80px;
+  }
+
+  .conhecimento {
+    height: auto; /* Altura dinâmica para melhor ajuste */
+  }
+
+  .icon-conhecimento {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contatos {
+    width: 100%;
+    background-size: cover;
+    margin-top: -40%;
+    margin-bottom: -20%;
+  }
+
+  .form {
+    margin: 0% -25% 0%;
+  }
+
+  footer {
+    display: block;
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #D7A039;
+  }
+
+  .txt-foot {
+    font-size: 0.8em;
+    color: #080808;
+  }
+
+
+  .atividades{
+    display: none;
+  }
+
+
+
+}
+
+
 
 
 
