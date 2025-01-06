@@ -13,28 +13,37 @@
     src: url('fonte/Super-Mario-World.ttf') format('truetype');
   }
 
-
-*{
+  *{
     margin: 0;
 }
 
-body {
-    margin: 0; 
-    height: 100%; 
-    background: linear-gradient(to bottom,#2443cf, #99E1E0); 
-    background-attachment: relative;
-    background-size: cover; 
-    color: white; 
-      
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #01C815;
+    --tertiary-color: #99E1E0;
+    --text-color: #ffffff;
+    --background-color: #f0f8ff;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --font-main: 'mario', sans-serif;
   }
-
-  .animation {
-    margin-top: 8px;
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, var(--primary-color), var(--tertiary-color));
+    font-family: var(--font-main);
+    color: var(--text-color);
+    overflow-x: hidden;
   }
+  
+  h2, h3 {
+    text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.7);
+    font-family: var(--font-main);
+    color: yellow;
+  }
+  
 
-
-
-  aside.menu-lateral {
+  nav.menu-lateral {
     width: 50px;
     height: 100%;
     padding: 10px 0 40px 2%;
@@ -104,7 +113,6 @@ ul li.item-menu a .txt-link{
 }
 
 
-
 .button-baixo {
   position: fixed;
   bottom: 20px;
@@ -127,23 +135,20 @@ ul li.item-menu a .txt-link{
   padding-bottom: 2.5rem;    /* altura do rodapé */
 }
 
-
 .imgyurimario {
-  flex-shrink: 0; 
-  max-width: 25%; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  border: 2px solid yellow;
-  border-radius: 50%;
-  margin: 10% 10%;
-}
-
+    flex-shrink: 0; 
+    max-width: 25%; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: 2px solid yellow;
+    border-radius: 50%;
+    margin: 10% 10%;
+  }
+  
 .img-topo-site img {
-  position: relative;
-  animation: flutuar 2s ease-in-out infinite alternate;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
 }
-
-
 
 @keyframes flutuar{
   0%{
@@ -154,61 +159,24 @@ ul li.item-menu a .txt-link{
   }
 }
 
-
-.form {
-  position: relative;
-  animation: flutuar1 1s ease-in-out infinite alternate;
-}
-
-@keyframes flutuar1{
-  0%{
-    top:0;
-  }
-  100%{
-    top:20px;
-  }
-}
-
-
- a:hover{
+a:hover{
     text-decoration: underline 4px;
     
  }
 
-  
-
-  
 
 header {
   position: relative;
-  text-align: center;
   height: 90vh;
 }
 
-.contato-conteudo {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 90px;
-  margin: 10% 50% 0% ;
-}
 
-.redes{
-  width: fit-content;
-  height: fit-content;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: -200px 960px;
-  gap: 20px;
-
-}
 
 header img {
   width: 100%; /* Ajusta conforme o tamanho desejado */
   display: block; /* Remove espaçamentos extras */
 }
+
 
 header h1 {
     width: 56%;
@@ -236,12 +204,47 @@ header h4 {
   font-family: 'mario';
   position: absolute;
   top: 38%;
-  left: 50%;
+  left: 85%;
   transform: translate(-50%, -50%);
   z-index: 1; /* Garante que o texto fique acima da imagem */
   padding: 0px; /* Espaçamento interno para melhor legibilidade */
   border-radius: 10px; /* Bordas arredondadas para um efeito visual */
   overflow: hidden;
+}
+
+h2{
+    font-size: 200%;
+    text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
+    color:#ffff00;
+    font-family: 'mario';
+    margin: 20px;
+    text-align: center;
+    
+}
+
+h3{
+    margin-top: 5%;
+    margin-bottom: -15%;
+    text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
+    font-size: 200%;
+    color:yellow;
+    font-family: 'mario';
+    line-height: 150px;
+    text-align: center;
+    
+}
+
+.title{
+    text-align: center;
+}
+
+p {
+    font-family: 'fonte1';
+    font-size: 110%;
+    line-height: 150%;
+    color:rgb(255, 255, 255);
+    padding-left: 5%;
+    text-align: center;
 }
 
 .typewriter {
@@ -277,7 +280,7 @@ main {
     text-align: center; /* Centraliza o texto */
     padding: 90px;
     overflow: hidden;
-  }
+}
   
 
 /* Estilo para a imagem */
@@ -286,85 +289,137 @@ main {
     height: auto; /* Mantém a proporção da imagem */
     justify-content: center; /* Centraliza itens verticalmente */
     padding: 70px;
+}
+
+/* BOTÕES DE REDES SOCIAIS*/
+.contato-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 90px;
+    margin: 10% 50% 0% ;
   }
   
+  .redes{
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -200px 960px;
+    gap: 20px;
+  
+  }
 
-  #sobre {
+  .socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 1s;
+  }
+  /* instagram*/
+  .containerOne:hover {
+  background-color: #fa0070;
+  transition-duration: 0.3s;
+  }
+  
+  .containerOne:hover {
+  box-shadow: 0px 0px 30px 1px #fa0070;
+  }
+  
+  /* Github*/
+  .containerTwo:hover {
+  background-color: #9c01bb;
+  transition-duration: 0.3s;
+  }
+  .containerTwo:hover {
+  box-shadow: 0px 0px 30px 1px #9c01bb;
+  }
+  
+  
+  /* linkdin*/
+  .containerThree:hover {
+  background-color: #03a1fd;
+  transition-duration: 0.3s;
+  }
+  .containerThree:hover {
+  box-shadow: 0px 0px 30px 1px #03a1fd;
+  }
+  
+  
+  /* Whatsapp*/
+  .containerFour:hover {
+  background-color: #0f0;
+  transition-duration: 0.3s;
+  }
+  .containerFour:hover {
+  box-shadow: 0px 0px 30px 1px #0f0;
+  }
+  
+  
+  .socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+  }
+  
+  .socialSvg {
+  width: 17px;
+  }
+  
+  .socialSvg path {
+  fill: rgb(255, 255, 255);
+  }
+  
+  .socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+  }
+  
+  @keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+  
+
+#sobre {
     min-height: 100vh; /* para cada seção ter no mínimo o tamanho da janela */
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 50px;
-  }
-
-
-
-
-.efeito, .efeito-img, .titulo, .efeito-div{ /*efeito para que suma e o JS traga de volta*/
-    visibility: hidden;
-}
-  
-
-
-
-
-h2{
-    font-size: 200%;
-    text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
-    color:#ffff00;
-    font-family: 'mario';
-    margin: 20px;
-    text-align: center;
-    
 }
 
-
-
-p {
-    font-family: 'fonte1';
-    font-size: 110%;
-    line-height: 150%;
-    color:rgb(255, 255, 255);
-    padding-left: 5%;
-    text-align: center;
-}
-
-/* Parte -#SOBRE- CONTÉM texto e imagem minha*/
-
-
-#sobre {
-  min-height: 40vh; /*para cada seção ter no mínimo o tamanho da janela*/
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 90%;
-  overflow-x: hidden;
-}
- 
 .sobre-container {
     display: flex; 
     align-items: center;
     gap: 100px; 
 }
-  
+
 .txt-sobre {
     flex: 1; 
     font-size: 1.1rem;
     line-height: 1.5;
     text-align: justify;
 }
-  
-.imgyuri {
-    flex-shrink: 0; 
-    max-width: 25%; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    border: 2px solid yellow;
-    border-radius: 50%;
+
+.efeito, .efeito-img, .titulo, .efeito-div{ /*efeito para que suma e o JS traga de volta*/
+    visibility: hidden;
 }
 
 .efeito-div{
-margin: 40px;
+    margin: 40px;
 }
 
 
@@ -377,14 +432,14 @@ margin: 40px;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
-  }
+    }
   
- .curriculo:hover {
+  .curriculo:hover {
     background-color: #0056b3;
-  }
+}
 
 
-  .conhecimento {
+.conhecimento {
     width: 100%;
     height: 100vh;
     display: flex; /* Flexbox aplicado ao container principal */
@@ -394,7 +449,6 @@ margin: 40px;
     text-align: center;
     overflow-x: hidden;
 }
-
 .container-conhecimento {
     display: flex; /* Define a estrutura como Flexbox */
     flex-wrap: wrap; /* Permite que os ícones "quebrem" para a próxima linha, se necessário */
@@ -417,251 +471,74 @@ margin: 40px;
   }
 
 
-
-.atividades h2{
-  line-height: 80px;
-  margin-bottom: 100px;
-}
-
-.atividades{
-  height: 80vh;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-.carousel-container {
-  position: relative;
-  max-width: 80%;
-  overflow: hidden;
-  padding-left: 10% ;
-}
-
-.carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-  flex: 0 0 50%; /* 2 itens visíveis */
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.img-atv {
-  width: 50%;
-  height: auto;
-}
-
-.prev-btn, .next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 25px;
-  cursor: pointer;
-  z-index: 10;
-  border: none;
-}
-
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
-
-
-
-
-
-
-
-
-.carrosel-slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 80px;
-  margin: 60px 0;
-}
-
-.lista {
-  width: 310px;
-  height: 520px;
-  position: relative;
-}
-
-.btn-seta {
-  background-color: #6d6d6d;
-  width: 50px;
-  height: 40px;
-  border: 0;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.btn-seta.btn-voltar {
-  transform: rotateY(180deg);
-}
-
-.btn-seta:hover {
-  background-color: #2f7cf1;
-}
-
-.cartao {
-  opacity: 0;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  padding: 12px;
-  border-radius: 10px;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.cartao.selecionado {
-  opacity: 1;
-  z-index: 1;
-}
-
-
-.cartao .informacoes {
-  background-color: rgba(179, 177, 185, 0.7);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.cartao .informacoes .nome {
-  color: #f1ecff;
-  font-size: 22px;
-}
-
-.cartao .informacoes .hp {
-  background-color: #333;
-  color: #f1ecff;
-  border-radius: 20px;
-  padding: 6px 10px;
-}
-
-.cartao .container-imagem {
-  text-align: center;
-}
-
-.cartao .imagem-card {
-  max-width: 100%;
-  max-height: 280px;
-  padding: 20px;
-}
-
-.cartao .descricao {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;;
-}
-
-.cartao .descricao .titulo {
-  background-color: #333;
-  color: #f1ecff;
-  padding: 12px;
-  font-size: 15px;
-}
-
-.cartao .descricao .texto {
-  font-size: 14px;
-  padding: 12px;
-  text-align: justify;
-  max-height: 115px;
-  overflow-y: auto;
-}
-
-.mobile{
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .mobile{
-    display: flex;
-}
-
-
-  .carrosel-slider {
-    display: flex;
+  .atividades h2{
+    line-height: 80px;
+    margin-bottom: 100px;
+  }
+  
+  .atividades{
+    height: 80vh;
     align-items: center;
     justify-content: center;
-    gap: 80px;
-    margin: 100px 0 0px;
-    height: 50vh;
+    text-align: center;
     overflow: hidden;
-    
   }
   
-  .lista {
-    width: 310px;
-    height: 520px;
+  .carousel-container {
     position: relative;
+    max-width: 80%;
+    overflow: hidden;
+    padding-left: 10% ;
   }
   
-  .cartao {
-    opacity: 0;
-    height: 50%;
+  .carousel {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: absolute;
-    padding: 12px;
-    border-radius: 10px;
-    transition: opacity 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
   
-  .cartao.selecionado {
-    opacity: 1;
-    z-index: 1;
-  }
-  
-  
- 
-  .cartao .container-imagem {
+  .carousel-item {
+    flex: 0 0 50%; /* 2 itens visíveis */
+    box-sizing: border-box;
     text-align: center;
   }
   
-  .cartao .imagem-card {
-    max-width: 100%;
-    max-height: 280px;
-    padding: 0px 0;
+  .img-atv {
+    width: 50%;
+    height: auto;
   }
   
+  .prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 25px;
+    cursor: pointer;
+    z-index: 10;
+    border: none;
+  }
+  
+  .prev-btn { left: 10px; }
+  .next-btn { right: 10px; }
 
 
-  .carrosel-slider {
-      padding: 0 15px;
-      gap: 10px;
+.form {
+    position: relative;
+    animation: flutuar1 1s ease-in-out infinite alternate;
+  }
+
+  @keyframes flutuar1{
+    0%{
+      top:0;
+    }
+    100%{
+      top:20px;
+    }
   }
 
 
-  .lista {
-      height: 400px;
-  }
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 .contatos{
   height: 100vh ;
   min-width: 100vh;
@@ -672,22 +549,7 @@ margin: 40px;
 
 }
   
-h3{
-  margin-top: 5%;
-  margin-bottom: -15%;
-  text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
-  font-size: 200%;
-  color:yellow;
-  font-family: 'mario';
-  line-height: 150px;
-  text-align: center;
-  
-}
 
-p{
-  font-family: 'fonte1';
-  font-size: 110%;
-}
 
 footer{
   height: 5vh;
@@ -703,83 +565,37 @@ footer{
   text-shadow: none;
 
 }
-
-
-
 form{
-  position: absolute;
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translate(-50%, 80%); /* Ajusta o deslocamento para o centro */
-
+    position: absolute;
+    transform: translate(0%, 70%); /* Ajusta o deslocamento para o centro */
+  
 }
 
-/* From Uiverse.io by ayyjayy2 */ 
 .form {
-  width: 250px; /* Largura do formulário */
-  height: 240px; /* Altura do formulário */
-
-  --input-focus: #2d8cf0;
-  --font-color: #323232;
-  --font-color-sub: #666;
-  --bg-color: beige;
-  --main-color: black;
-  background: lightblue;
-  background: rgba(140, 205, 246, 0.9); /* Fundo semi-transparente */
-
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 20px;
-
-  border: 2px solid var(--main-color);
-  border-radius: 10px;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
-
-}
-
-  
-  .form .title {
-    text-align: center;
-}
-
-  .title {
-    color: #0056b3;
-    font-weight: 900;
-    font-size: 20px;
-    margin-bottom: 0px;
-    font-family: 'mario';
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    width: 250px; /* Largura do formulário */
+    height: 240px; /* Altura do formulário */
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(140, 205, 246, 0.9);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow-color);
   }
   
-
   .input {
-    width: 200px;
-    height: 20px;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
     border-radius: 5px;
-    border: 2px solid var(--main-color);
-    background-color: var(--bg-color);
-    box-shadow: 4px 4px var(--main-color);
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--font-color);
-    padding: 4px 10px;
-    outline: none;
-  }
-  
-  .input::placeholder {
-    color: var(--font-color-sub);
-    opacity: 0.8;
   }
   
   .input:focus {
-    border: 2px solid var(--input-focus);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px var(--secondary-color);
   }
   
-
   .button-log {
     cursor: pointer;
     width: 40px;
@@ -821,14 +637,15 @@ form{
     cursor: pointer;
     font-family: 'mario';
     background-color: #01C815;
-  }
+}
+
+.button-confirm:hover{
+    background-color: #076510;
+}
 
 
 
-
-
-
-/*botão de contato*/
+/*botão do CURRICULO */
 .loader {
     width: fit-content;
     font-size: 19px;
@@ -993,536 +810,540 @@ form{
     }
   }
 /*fim de botão de contato*/
-
-
-
-
-
-
-/* Responsividade para celulares */
-@media (min-width: 260px) and (max-width: 360px) {
-
-  *{
-      margin: 0 0 0 0;
-      overflow-x: hidden;
-  }
   
-  body {
 
-      margin: 0; 
-      height: 100%; 
-      background: linear-gradient(to bottom,#3C58D3, #99E1E0); 
-      background-attachment: relative;
-      color: white; 
-      overflow: hidden;
 
-  }
-  
-  
-  /*fonte do site inteiro*/
-  h2{
-      font-size: 1.0em;
-      text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
-      color:#ffff00;
-      font-family: 'mario';
-      margin: 20px;
-      overflow: hidden;
-      width: 100%;
-      
-  }
-  
-  h3{
+/* Responsividade para celulares pequenos */
+@media (min-width: 210px) and (max-width: 399px) {
+
+*{
+    margin: 0 0 0 0;
+    overflow-x: hidden;
+}
+    
+
+/*fonte do site inteiro*/
+h2{
     font-size: 1.0em;
-    line-height: 150%;
     text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
     color:#ffff00;
     font-family: 'mario';
     margin: 20px;
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100%;
-  }
+    
+}
 
-
-      
-header{
-  overflow: hidden;
-  height: 100vh;
+h3{
+  font-size: 1.0em;
+  line-height: 150%;
+  text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
+  color:#ffff00;
+  font-family: 'mario';
+  margin-top: 10px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 header h1 {
   width: 100%;
   font-size: 1.6em;
-  top: 75%;
-  display: fixed;
-  text-align: center;
+  top: 68%;
   margin-left: -10%;
-
-}
-
-header h4 {
-  font-size: 0.9em;
-  width: 100%;
-  top: 84%;
+  display: contents;
   text-align: center;
-  margin-left: 0%;
 }
 
-  p {
-      font-family: 'fonte1';
-      font-size: 0.9em;
-      line-height: 150%;
-      color:rgb(255, 255, 255);
-      text-shadow: 1px 2px 1px #d4e304a8;
-      text-align: left;
-  }
-  
-  
-  header img{
-      width: 100%;
-      background-position: contain;
-      margin: 0;
-  }
-  
-  header nav {
-      position: fixed; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      display: flex;
-      justify-content: space-around; 
-      background-color: rgba(0, 0, 0, 0.5); 
-      align-items: center;
-      height: 5vh;
-      color: white;
-      padding: 0; 
-      z-index: 1;
-  }
-    
-   
-    header nav a {
-      font-family: 'mario';
-      font-size: 15px;
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-      line-height: 20px;
-  }
-  
-   a:hover{
-      text-decoration: underline 4px;
-      
-   }
-    
-    header nav .contato {    
-      font-family: 'mario';
-      font-size: 15px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    
-    header nav .contato:hover {
-      background-color: #0056b3;
-    }
+header h4{
+    width: 100%;
+    font-size: 0.9em;
+    top: 74%;
+    margin-left: -35%;
+    display: contents;
+    text-align: center;
+}
 
-    header {
+.redes{
+    width: 100%;
+    font-size: 0.9em;
+    margin-top: 20%;
+    margin-left: 0%;
+    display: fixed;
+    text-align: center;
+}
+
+header{
+    overflow: hidden;
+    height: 95vh;
     position: relative;
     text-align: center;
-    height: 105vh;
-  }
-  
-  header img {
-    width: 100%; /* Ajusta conforme o tamanho desejado */
-    display: block; /* Remove espaçamentos extras */
-  }
-  
-  .contato{
-    display: flex;
-    margin-left: 30%;
-  }
-
-.ativ{
-  display: none;
 }
-  
+    
+
+header img{
+    width: 100%;
+    background-position: contain;
+    margin: 0;
+}
+
 .imgyurimario {
-  align-items: center;
-  margin-top: 15%;
-  max-width: 80%; 
-}
-
-
-   #sobre {
-      display: flex;
-      flex-direction: column; /* Para alinhar o conteúdo verticalmente */
-      align-items: center; /* Centraliza horizontalmente */
-      justify-content: center; /* Centraliza verticalmente */
-      height: 200vh;
-      padding: 100px 20px 0;
-      text-align: center;
-      overflow: hidden;
-      
-    }
-    
-    .sobre-container {
-      display: flex;
-      flex-direction: column; /* Para que o texto fique acima da imagem */
-      align-items: center; /* Centraliza os itens horizontalmente */
-      gap: 10px; /* Espaço entre o texto e a imagem */
-    }
-
-    .sobre-container1 {
-      display: flex;
-      flex-direction: column; /* Para que o texto fique acima da imagem */
-      align-items: center; /* Centraliza os itens horizontalmente */
-      gap: 10px; /* Espaço entre o texto e a imagem */
-      width: 100%;
- }
-    
-    .efeito-div {
-      width: 100%;
-      font-size: 1rem; /* Ajusta o tamanho do texto */
-      max-width: 100%; /* Limita a largura do texto */
-      text-align: center; /* Centraliza o texto */
-    }
-
-    .imgyuri {
-      width: 100%; /* Ajusta o tamanho da imagem */
-      height: 90px; /* Faz a imagem ficar proporcional */
-      border-radius: 50%; /* Torna a imagem circular */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      border: 2px solid yellow;
-    }
-  
-    .efeito-div{
-      text-align-last: center;
-
-    }
-
-    .carousel-item {
-      flex: 0 0 100%; /* 1 item visível em telas menores */
-  }
-
-
-  .curriculo {    
-      font-family: 'mario';
-      font-size: 15px;
-      background-color: #00f414;
-      color: rgb(255, 255, 255);
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 5px;
-      align-self: center;
-    }
-    
-   .curriculo:hover {
-      background-color: #61f16f;
-    }
-  
-    .conhecimento{
-      margin: 0px 0px ;
-      height: 110vh;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    
-    .container-conhecimento{
-      margin-top: 10%;
-    }
-    
-    .icon-conhecimento{
-      width: 90px;
-      height: 90px;
-      justify-content: space-around;
-      padding: 15px 10px;  
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    
-  
-    .atividades{
-      display: none;
-    }
-    
-    #atividades{
-      display: none;
-    }
-
-    .carrosel-slider{
-      display: none;
-    }
-  
-  
-  /*Parte final de contatos*/
-  
-  .contatos{
-      width: 100%;
-      height: 60vh;
-      background-image: url(imagens/SuperMarioMaker-Wallpaper-1920x10805.png);
-  }
-      
- 
-  .form {
-    margin: -43% -19%;
-    text-align: center;
     align-items: center;
+    margin-top: 5%;
+    max-width: 80%; 
+    display: fixed;
 }
-    
-  footer{
-    display: none;
-      height: 10vh;
-      background-color: #D7A039;
-  }
-    
-  .txt-foot{
-      font-size: 0.9em;
-      height: 0;
-      color: #080808;
-      text-shadow: none;
-    
-  }
-  
 
-  .contato-conteudo {
+header nav {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 90px;
-    margin: 10% 50% 0% ;
+    justify-content: space-around; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    align-items: center;
+    height: 5vh;
+    color: white;
+    padding: 0; 
+    z-index: 1;
+}
+  
+ 
+  header nav a {
+    font-family: 'mario';
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    line-height: 20px;
+}
+
+ a:hover{
+    text-decoration: underline 4px;
+    
+ }
+  
+  header nav .contato {    
+    font-family: 'mario';
+    font-size: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
   }
   
-  .redes{
-    width: fit-content;
-    height: fit-content;
-    background-color: transparent;
+header nav .contato:hover {
+    background-color: #0056b3;
+}
+
+
+header img {
+  width: 100%; /* Ajusta conforme o tamanho desejado */
+  display: fixed;
+  /* Remove espaçamentos extras */
+}
+
+p {
+    font-family: 'fonte1';
+    font-size: 0.9em;
+    line-height: 150%;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 2px 1px #d4e304a8;
+    text-align: left;
+    width: 90%;
+}
+
+#sobre {
+
     display: flex;
+    flex-direction: column; /* Para alinhar o conteúdo verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: auto;
+    padding: 10px 0px 0;
+    text-align: left;
+    overflow: hidden;
+    
+}
+.button-baixo{
+    z-index: 9999;
+}
+  
+  .sobre-container {
+    display: flex;
+    flex-direction: column; /* Para que o texto fique acima da imagem */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaço entre o texto e a imagem */
+  }
+
+  .sobre-container1 {
+    display: flex;
+    flex-direction: column; /* Para que o texto fique acima da imagem */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaço entre o texto e a imagem */
+    width: 100%;
+}
+
+.efeito-div {
+    width: 100%;
+    font-size: 1rem; /* Ajusta o tamanho do texto */
+    max-width: 100%; /* Limita a largura do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+.conhecimento{
+    margin: 0px 0px 100px ;
+    height: auto;
     align-items: center;
     justify-content: center;
-    margin: 160px 0px;
-    gap: 20px;
-    width: 100%;
-  
+    text-align: center;
   }
   
+  .container-conhecimento{
+    margin-top: 10%;
+  }
   
+  .icon-conhecimento{
+    width: 90px;
+    height: 90px;
+    justify-content: space-around;
+    padding: 15px 10px;  
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 
+.atividades{
+    display: none;
+  }
+  
+  #atividades{
+    display: none;
+  }
+
+  .carrosel-slider{
+    display: none;
+}
+.contatos{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    height: 90vh;
+}
 
 
+footer{
+    display: none;
+}
 
-/* Responsividade para celulares grandes (380px a 768px) */
-@media (min-width: 380px) and (max-width: 834px) {
-  *{
+}
+
+@media (min-width: 210px) and (max-width: 399px) {
+
+.form {
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    transform: translate(-35%, 35%);
+
+}}
+
+@media (min-width: 330px) and (max-width: 400px) {
+
+.form {
+    overflow: hidden;
+    text-align: center;
+    align-items: center;
+    transform: translate(-60%, 30%);
+
+}
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+
+    .form {
+        overflow: hidden;
+        text-align: center;
+        align-items: center;
+        transform: translate(0%, 70%);
+    
+    }
+    }
+
+
+/* Responsividade para celulares GRANDES tipo XR */
+@media (min-width: 400px) and (max-width: 820px) {
+
+*{
     margin: 0 0 0 0;
     overflow-x: hidden;
 }
- 
-  body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #0056b3, #99E1E0);
-    color: white;
-  }
-
-  h2, h3 {
-    font-size: 1.2em;
-    margin: 10px 20px;
-  }
-
-  header {
-    height: auto;
-    overflow: hidden;
-  }
-
-  header h1 {
-    width: 100%;
-    font-size: 1.8em;
-    margin-left: 0;
-    text-align: center;
-    top: 50%;
-    margin-left: -10%;
     
-  }
 
-  header h4 {
-    font-size: 1em;
-    margin-left: 0;
-    top: 55%;
-    margin-left: 2%;
-  }
-
-  .contato {
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-  }
-
-
-  .redes {
-    gap: 10px;
-    margin: 210px auto;
-  }
-
-  .imgyurimario {
-    margin-top: 10%;
-    max-width: 70%;
-    text-align: center;
-    margin-left: 15%;
-  }
-
-  #sobre {
+/*fonte do site inteiro*/
+h2{
+    font-size: 1.0em;
+    text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
+    color:#ffff00;
+    font-family: 'mario';
+    margin: 20px;
+    overflow: hidden;
     width: 100%;
-    padding: 50px 0px;
-    height: auto; /* Permite altura dinâmica */
-  }
+    
+}
 
-  .sobre-container, .sobre-container1 {
-    gap: 20px;
-    text-align: center;
-  }
+h3{
+  font-size: 1.0em;
+  line-height: 150%;
+  text-shadow: 3px 4px 1px rgba(0, 0, 0, 0.701);
+  color:#ffff00;
+  font-family: 'mario';
+  margin-top: 10px;
+  overflow-x: hidden;
+  width: 100%;
+}
 
-  .imgyuri {
-    width: 80px;
-    height: 80px;
-  }
+header h1 {
+  width: 100%;
+  font-size: 2.0em;
+  top: 60%;
+  margin-left: -10%;
+  display:contents;
+  text-align: center;
+}
 
-  .conhecimento {
-    height: auto; /* Altura dinâmica para melhor ajuste */
-  }
-
-  .icon-conhecimento {
-    width: 80px;
-    height: 80px;
-  }
-
-  .contatos {
+header h4{
     width: 100%;
-    background-size: cover;
-    margin-top: -40%;
-    margin-bottom: -20%;
-  }
+    font-size: 1.2em;
+    top: 85%;
+    margin-left: -35%;
+    display:contents;
+    text-align: center;
+}
 
-  .form {
-    margin: 0% -25% 0%;
-  }
+.redes{
+    width: 100%;
+    font-size: 0.9em;
+    margin-top: 20%;
+    margin-left: 0%;
+    display: fixed;
+    text-align: center;
+}
 
-  footer {
-    display: block;
+header{
+    overflow: hidden;
     height: auto;
-    padding: 20px 0;
+    display: fixed;
+    position: relative;
     text-align: center;
-    background-color: #D7A039;
+    height: 105vh;
+    margin-bottom: -40%;
+    }
+    
+
+header img{
+    width: 100%;
+    background-position: contain;
+    margin: 0;
+}
+
+.imgyurimario {
+    align-items: center;
+    margin-top: 5%;
+    max-width: 80%; 
+    display: fixed;
+}
+
+header nav {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    display: flex;
+    justify-content: space-around; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    align-items: center;
+    height: 5vh;
+    color: white;
+    padding: 0; 
+    z-index: 1;
+}
+  
+ 
+  header nav a {
+    font-family: 'mario';
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    line-height: 20px;
+}
+
+ a:hover{
+    text-decoration: underline 4px;
+    
+ }
+  
+  header nav .contato {    
+    font-family: 'mario';
+    font-size: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+header nav .contato:hover {
+    background-color: #0056b3;
+}
+
+
+header img {
+  width: 100%; /* Ajusta conforme o tamanho desejado */
+  display: fixed;
+  /* Remove espaçamentos extras */
+}
+
+p {
+    font-family: 'fonte1';
+    font-size: 0.9em;
+    line-height: 150%;
+    color:rgb(255, 255, 255);
+    text-shadow: 1px 2px 1px #d4e304a8;
+    text-align: left;
+    width: 90%;
+}
+
+#sobre {
+    position:static;
+    flex-direction: column; /* Para alinhar o conteúdo verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    height: auto;
+    padding: 10px 0px 0;
+    text-align: left;
+    overflow-x: hidden;
+    margin-top: 10%;
+    
+}
+.button-baixo{
+    z-index: 9999;
+}
+  
+  .sobre-container {
+    display: flex;
+    flex-direction: column; /* Para que o texto fique acima da imagem */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaço entre o texto e a imagem */
   }
 
-  .txt-foot {
-    font-size: 0.8em;
-    color: #080808;
+  .sobre-container1 {
+    display: flex;
+    flex-direction: column; /* Para que o texto fique acima da imagem */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaço entre o texto e a imagem */
+    width: 100%;
+}
+
+.efeito-div {
+    width: 100%;
+    font-size: 1rem; /* Ajusta o tamanho do texto */
+    max-width: 100%; /* Limita a largura do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+.conhecimento{
+    margin: 0px 0px 100px ;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
+  
+  .container-conhecimento{
+    margin-top: 10%;
+  }
+  
+  .icon-conhecimento{
+    width: 90px;
+    height: 90px;
+    justify-content: space-around;
+    padding: 15px 10px;  
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 
-  .atividades{
+.atividades{
+    display: none;
+  }
+  
+  #atividades{
     display: none;
   }
 
+  .carrosel-slider{
+    display: none;
+}
 
+.contatos{
+    height: 70vh;
+}
+
+.form {
+    margin-left: 7%;
+    text-align: center;
+    align-items: center;
+    margin-top: -10%;
+}
+
+footer{
+    display: none;
+}
 
 }
 
 
+/*RESPONSIVIDADE PARA TABLETE */
+@media (min-width: 820px) and (max-width: 880px) {
+    
+    header h1{
+        margin-top: 10%;
+    }
+    .redes{
+        margin-top: -1% ;
+    }
 
+    #sobre {
+        width: 100%;
+        padding: 100px 0px;
+        margin-bottom: -100%;
+        height: auto; /* Permite altura dinâmica */
+      }
 
+    .conhecimento {
+        margin: -10% auto;
+        height: 80vh; /* Altura dinâmica para melhor ajuste */
+    }
+    .icon-conhecimento {
+        width: 60px;
+        height: 60px;
+    
+      }
 
-/* From Uiverse.io by 0800Gonza */ 
-
-
-
-
-
-  
-  /* for all social containers*/
-  .socialContainer {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background-color: rgb(44, 44, 44);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition-duration: 1s;
-  }
-  /* instagram*/
-  .containerOne:hover {
-  background-color: #fa0070;
-  transition-duration: 0.3s;
-  }
-  
-  .containerOne:hover {
-  box-shadow: 0px 0px 30px 1px #fa0070;
-  }
-  
-  /* Github*/
-  .containerTwo:hover {
-  background-color: #9c01bb;
-  transition-duration: 0.3s;
-  }
-  .containerTwo:hover {
-  box-shadow: 0px 0px 30px 1px #9c01bb;
-  }
-  
-  
-  /* linkdin*/
-  .containerThree:hover {
-  background-color: #03a1fd;
-  transition-duration: 0.3s;
-  }
-  .containerThree:hover {
-  box-shadow: 0px 0px 30px 1px #03a1fd;
-  }
-  
-  
-  /* Whatsapp*/
-  .containerFour:hover {
-  background-color: #0f0;
-  transition-duration: 0.3s;
-  }
-  .containerFour:hover {
-  box-shadow: 0px 0px 30px 1px #0f0;
-  }
-  
-  
-  .socialContainer:active {
-  transform: scale(0.9);
-  transition-duration: 0.3s;
-  }
-  
-  .socialSvg {
-  width: 17px;
-  }
-  
-  .socialSvg path {
-  fill: rgb(255, 255, 255);
-  }
-  
-  .socialContainer:hover .socialSvg {
-  animation: slide-in-top 0.3s both;
-  }
-  
-  @keyframes slide-in-top {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-  
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  }
+        .form {
+            overflow: hidden;
+            text-align: center;
+            align-items: center;
+            transform: translate(65%, 120%);
+        
+        }
+        
+}
