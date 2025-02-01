@@ -11,6 +11,7 @@ revelar.reveal('.efeito-img3',    {duration: 1500,distance: '90px',delay: 1500,o
 revelar.reveal('.efeito-img4',    {duration: 2000,distance: '90px',delay: 2000,origin: 'left',reset:false})
 revelar.reveal('.efeito-img5',    {duration: 2500,distance: '90px',delay: 2500,origin: 'left',reset:false})
 revelar.reveal('.efeito-img6',    {duration: 3000,distance: '90px',delay: 3000,origin: 'left',reset:false})
+revelar.reveal('.efeito-img7',    {duration: 3000,distance: '90px',delay: 3500,origin: 'left',reset:false})
 
 
 
