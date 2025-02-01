@@ -471,56 +471,65 @@ main {
   }
 
 
+
+  /* PARTE DE CARDS */
+
   .atividades h2{
     line-height: 80px;
     margin-bottom: 100px;
   }
-  
-  .atividades{
-    height: 80vh;
+
+  .cards-container{
+    display: flex;
+    gap: 40px;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    overflow: hidden;
   }
-  
-  .carousel-container {
-    position: relative;
-    max-width: 80%;
-    overflow: hidden;
-    padding-left: 10% ;
-  }
-  
-  .carousel {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-item {
-    flex: 0 0 50%; /* 2 itens visíveis */
-    box-sizing: border-box;
-    text-align: center;
-  }
-  
-  .img-atv {
-    width: 50%;
-    height: auto;
-  }
-  
-  .prev-btn, .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 25px;
+
+  .img-port {
+    width: 300px;
+    height: 350px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
     cursor: pointer;
-    z-index: 10;
-    border: none;
-  }
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+
+
   
-  .prev-btn { left: 10px; }
-  .next-btn { right: 10px; }
+
+  
+
+  
 
 
 .form {
@@ -1015,17 +1024,68 @@ p {
 }
 
 
-.atividades{
-    display: none;
-  }
-  
-  #atividades{
-    display: none;
-  }
 
-  .carrosel-slider{
-    display: none;
+      /* PORTFÓLIO */
+ /* PARTE DE CARDS */
+
+ .atividades h2{
+  line-height: 80px;
+  margin-bottom: 10px;
 }
+
+.atividades{
+  margin-bottom: 80px;
+}
+
+.cards-container{
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-port {
+  width: 350px;
+  height: 200px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 8s;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+}
+
+.img-port:hover {
+  background-position: 100% 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b8;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+
+
+
+
 .contatos{
     width: 100%;
     overflow: hidden;
@@ -1278,28 +1338,100 @@ p {
     text-align: center;
 }
 
+/* PORTFÓLIO */
+ /* PARTE DE CARDS */
+
+ .atividades h2{
+  line-height: 80px;
+  margin-bottom: 10px;
+}
 
 .atividades{
-    display: none;
-  }
-  
-  #atividades{
-    display: none;
-  }
+  margin-bottom: 80px;
+}
 
-  .carrosel-slider{
-    display: none;
+.cards-container{
+  display:flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-port {
+  width: 350px;
+  height: 200px;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 8s;
+  cursor: pointer;
+  border-radius: 40px;
+  position: relative;
+}
+
+.img-port:hover {
+  background-position: 100% 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b8;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transition: .5s;
+}
+
+.overlay:hover {
+  opacity: 1;
 }
 
 .contatos{
-    height: 70vh;
+  margin-top: 5%;
+  height: 100vh;
+  overflow: hidden;
+
+
+}
+
+.contatos-container{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 120vh;
+
+}
+
+.titulo-h3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20%;
+  z-index: 99;
+}
+
+.title{
+  overflow: hidden;
+  line-height: 250%;
 }
 
 .form {
-    margin-left: 7%;
-    text-align: center;
-    align-items: center;
-    margin-top: -10%;
+  margin-top: -80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
 }
 
 footer{
